@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresos Extra con IA | El Plan de 30 Días</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B132B',
+                            light: '#1C2541',
+                            cyan: '#00FFCC',
+                            gold: '#FFD700',
+                            goldHover: '#FFC000',
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(0, 255, 204, 0.3)',
+                        'gold': '0 0 25px rgba(255, 215, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B132B;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-cyan {
+            background: linear-gradient(to right, #00FFCC, #00BFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(28, 37, 65, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 204, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-dark">
+
+    <!-- Banner de Oferta -->
+    <div class="bg-brand-cyan text-brand-dark text-center py-2 px-4 text-sm font-bold uppercase tracking-wider relative z-50">
+        🔥 OFERTA DE LANZAMIENTO: USD 9  🔥
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Texto Principal -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-block bg-brand-light border border-brand-cyan/50 text-brand-cyan font-semibold px-4 py-1.5 rounded-full text-sm mb-6 shadow-neon">
+                        Para emprendedores sin experiencia técnica
+                    </div>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                        El Plan Exacto de 30 Días para Ganar <br>
+                        <span class="text-gradient-gold">Tus Primeros Dólares</span> <br>
+                        Desde Casa con IA
+                    </h1>
+                    <p class="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        La guía diaria, paso a paso, para crear y vender productos digitales usando Inteligencia Artificial gratuita. <strong>Sin rellenos. Solo resultados reales.</strong>
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-8 rounded-full text-xl shadow-gold transform transition hover:scale-105 w-full sm:w-auto text-center">
+                            ¡SÍ, QUIERO EMPEZAR HOY!
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center lg:justify-start gap-4 mt-6 text-sm text-gray-400">
+                        <div class="flex items-center gap-1"><i data-lucide="shield-check" class="text-green-400 w-5 h-5"></i> Garantía 7 días</div>
+                        <div class="flex items-center gap-1"><i data-lucide="lock" class="text-brand-cyan w-5 h-5"></i> Pago Seguro</div>
+                    </div>
+                </div>
+
+                <!-- Imagen de Portada -->
+                <div class="lg:w-1/2 relative">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-blue-500 rounded-2xl filter blur-[40px] opacity-30"></div>
+                        <div class="relative bg-brand-light border border-slate-700 p-2 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition duration-500 min-h-[450px] flex items-center justify-center overflow-hidden">
+                            <!-- Intenta cargar portado.jpg, si no portada ingresos extra.jpg -->
+                            <img src="portado.jpg" alt="Portada Ebook" class="w-full h-auto rounded-lg object-cover" 
+                                 onerror="this.src='portada ingresos extra.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('placeholder-hero').style.display='flex';}">
+                            <div id="placeholder-hero" class="hidden flex-col items-center p-8 text-gray-500">
+                                <i data-lucide="book-open" class="w-16 h-16 mb-4 opacity-20"></i>
+                                <p>Sube 'portado.jpg' a GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problemas/Dolores -->
+    <section class="py-20 bg-brand-light/50 border-y border-white/10">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">¿Te sientes estancado intentando monetizar la IA?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
+                        <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Teoría Infinita</h3>
+                    <p class="text-gray-400 text-sm">Ves tutoriales pero no sabes cómo convertir esa información en dinero real en tu cuenta bancaria.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
+                        <i data-lucide="x-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Miedo Técnico</h3>
+                    <p class="text-gray-400 text-sm">Piensas que necesitas ser un experto en computación para crear un negocio digital.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
+                        <i data-lucide="help-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Falta de Método</h3>
+                    <p class="text-gray-400 text-sm">Pruebas cosas sueltas sin un plan ordenado y terminas abandonando por frustración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que aprenderán (El Plan) -->
+    <section class="py-24 relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Tu Hoja de Ruta de <span class="text-gradient-cyan">4 Semanas</span></h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">01</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Fundamentos y Herramientas</h3>
+                            <p class="text-gray-400 text-sm">Configuramos tu arsenal de IA gratuita y dominamos el arte de dar órdenes (prompts) que generen valor real.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl border-l-4 border-brand-cyan">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">02</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Creación de tu Producto</h3>
+                            <p class="text-gray-400 text-sm">Usamos la IA para escribir, estructurar y diseñar un producto que la gente quiera comprar.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">03</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Marketing y Ventas</h3>
+                            <p class="text-gray-400 text-sm">Montamos el sistema de ventas automático para que tu producto empiece a generar ingresos 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" alt="IA Concept" class="rounded-2xl shadow-2xl border border-white/10 opacity-60">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre el Autor/Equipo -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl text-center md:text-left">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-10">
+                <div class="w-48 h-48 shrink-0 rounded-full border-4 border-brand-cyan/30 overflow-hidden shadow-neon">
+                    <img src="Gemini_Generated_Image_miiyqimiiyqimiiy.png" alt="Logo MP" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="hidden p-8 text-gray-500">Logo Equipo</div>
+                </div>
+                <div>
+                    <h2 class="text-brand-cyan font-bold tracking-widest uppercase text-xs mb-2">Creado por</h2>
+                    <h3 class="text-3xl font-heading font-black mb-4">MP Finanzas Personales</h3>
+                    <p class="text-gray-300 leading-relaxed italic">
+                        "Nuestra misión es democratizar el acceso a las finanzas digitales. No importa si empiezas de cero absoluto; con las herramientas correctas y un plan diario, el éxito es una consecuencia inevitable."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="py-24 text-center">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-4xl font-heading font-black mb-8">¿Estás listo para dejar de mirar y empezar a ganar?</h2>
+            <div class="bg-brand-dark border-2 border-brand-gold rounded-3xl p-10 shadow-gold inline-block w-full">
+                <p class="text-gray-400 uppercase tracking-widest text-sm mb-4">Acceso inmediato por solo</p>
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <span class="text-7xl font-black text-white">$9</span>
+                    <span class="text-2xl text-brand-gold font-bold">USD</span>
+                </div>
+                <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-brand-gold to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-brand-dark font-black py-5 rounded-2xl text-2xl transition-all transform hover:scale-[1.03]">
+                    ¡QUIERO EL PLAN DE 30 DÍAS!
+                </a>
+                <div class="flex items-center justify-center gap-6 mt-8 opacity-50">
+                    <i data-lucide="credit-card" class="w-6 h-6"></i>
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050A17] py-12 text-center border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <h3 class="font-bold text-brand-cyan mb-4 uppercase tracking-widest text-sm">MP Finanzas Personales</h3>
+            <p class="text-[10px] text-gray-600 max-w-xl mx-auto">
+                © 2025 Ingresos Extra con IA. Este producto no garantiza resultados por sí solo; el éxito depende de la implementación del usuario.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -3,113 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gran Diosa | Abrazando Curvas</title>
+    <title>Ingresos Extra con IA | El Plan de 30 Días</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B132B',
+                            light: '#1C2541',
+                            cyan: '#00FFCC',
+                            gold: '#FFD700',
+                            goldHover: '#FFC000',
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(0, 255, 204, 0.3)',
+                        'gold': '0 0 25px rgba(255, 215, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --rosa-diosa: #ff69b4; /* El rosa de tu logo */
-            --negro-diosa: #1a1a1a;
-            --blanco: #ffffff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Forzamos el color de fondo desde el inicio para evitar el "flash" blanco */
+        html, body {
+            background-color: #0B132B !important;
             margin: 0;
-            color: var(--negro-diosa);
-            line-height: 1.6;
+            padding: 0;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-
-        header {
-            background: var(--blanco);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid var(--rosa-diosa);
+        .text-gradient-gold {
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .hero {
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=1000') center/cover;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
+        .text-gradient-cyan {
+            background: linear-gradient(to right, #00FFCC, #00BFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: var(--negro-diosa);
+        .glass-panel {
+            background: rgba(28, 37, 65, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 204, 0.2);
         }
-
-        .hero span { color: var(--rosa-diosa); }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: 0.3s;
+        /* Estilo para imágenes que no cargan */
+        img {
+            background: rgba(255,255,255,0.05);
         }
-
-        .section { padding: 60px 20px; text-align: center; }
-
-        .tabla-talles {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        .tabla-talles th, .tabla-talles td {
-            border: 1px solid #ddd;
-            padding: 12px;
-        }
-
-        .tabla-talles th { background-color: var(--rosa-diosa); color: white; }
-
-        footer { background: var(--negro-diosa); color: white; padding: 40px; text-align: center; }
     </style>
 </head>
-<body>
+<body class="antialiased selection:bg-brand-cyan selection:text-brand-dark">
 
-<header>
-    <h1>GRAN <span>DIOSA</span></h1>
-    <p>Abrazando Curvas</p>
-</header>
+    <!-- Top Banner -->
+    <div class="bg-brand-cyan text-brand-dark text-center py-2 px-4 text-sm font-bold uppercase tracking-wider relative z-50">
+        🔥 OFERTA DE LANZAMIENTO: USD 9  🔥
+    </div>
 
-<section class="hero">
-    <h1>Tu moda, tus reglas, <span>tus curvas</span></h1>
-    <p>Talles reales del 44 al 70 para que te sientas única.</p>
-    <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-whatsapp">Ver Catálogo en WhatsApp</a>
-</section>
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 overflow-hidden">
+        <!-- Luces de fondo -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
 
-<section class="section">
-    <h2>Guía de Talles Reales</h2>
-    <p>Medite sin ropa, con el centímetro justo (ni apretado ni suelto).</p>
-    <table class="tabla-talles">
-        <thead>
-            <tr>
-                <th>Talle</th>
-                <th>Busto (cm)</th>
-                <th>Cadera (cm)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>4</td><td>110-115</td><td>120-125</td></tr>
-            <tr><td>6</td><td>120-125</td><td>130-135</td></tr>
-            <tr><td>8</td><td>130-135</td><td>140-145</td></tr>
-        </tbody>
-    </table>
-</section>
+        <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Texto Hero -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-block bg-brand-light border border-brand-cyan/50 text-brand-cyan font-semibold px-4 py-1.5 rounded-full text-sm mb-6 shadow-neon">
+                        Para emprendedores sin experiencia técnica
+                    </div>
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                        El Plan Exacto de 30 Días para Ganar <br>
+                        <span class="text-gradient-gold">Tus Primeros Dólares</span> <br>
+                        Desde Casa con IA
+                    </h1>
+                    <p class="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        La guía diaria, paso a paso, para crear y vender productos digitales usando Inteligencia Artificial gratuita. <strong>Sin rellenos. Solo resultados reales.</strong>
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-8 rounded-full text-xl shadow-gold transform transition hover:scale-105 w-full sm:w-auto text-center">
+                            ¡SÍ, QUIERO EMPEZAR HOY!
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center justify-center lg:justify-start gap-4 mt-6 text-sm text-gray-400">
+                        <div class="flex items-center gap-1"><i data-lucide="shield-check" class="text-green-400 w-5 h-5"></i> Garantía 7 días</div>
+                        <div class="flex items-center gap-1"><i data-lucide="lock" class="text-brand-cyan w-5 h-5"></i> Pago Seguro</div>
+                    </div>
+                </div>
 
-<footer>
-    <p>Tomas Thomás 36, San Martín, Mendoza</p>
-    <p>Siguenos en @gran.diosa.abrazando.curvas_</p>
-</footer>
+                <!-- Imagen Hero -->
+                <div class="lg:w-1/2 relative">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-blue-500 rounded-2xl filter blur-[40px] opacity-30"></div>
+                        <div class="relative bg-brand-light border border-slate-700 p-2 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition duration-500 min-h-[400px] flex items-center justify-center overflow-hidden">
+                            <!-- Imagen de Portada -->
+                            <img src="portado.jpg" alt="Portada del Libro Ingresos Extra con IA" class="w-full h-auto rounded-lg object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <!-- Placeholder si la imagen no existe aún en GitHub -->
+                            <div class="hidden flex-col items-center p-8 text-gray-500 text-center">
+                                <i data-lucide="image" class="w-12 h-12 mb-2 opacity-20"></i>
+                                <p class="text-xs">Sube 'portado.jpg' para ver la portada aquí</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Beneficios Cortos -->
+    <section class="py-12 bg-brand-light/30">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-brand-cyan font-bold text-2xl mb-1">100%</div>
+                    <div class="text-gray-400 text-xs uppercase tracking-widest">Práctico</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-brand-cyan font-bold text-2xl mb-1">Gratis</div>
+                    <div class="text-gray-400 text-xs uppercase tracking-widest">Herramientas</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-brand-cyan font-bold text-2xl mb-1">30</div>
+                    <div class="text-gray-400 text-xs uppercase tracking-widest">Días de Plan</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-brand-cyan font-bold text-2xl mb-1">USD</div>
+                    <div class="text-gray-400 text-xs uppercase tracking-widest">Gana en Dólares</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autoridad / Equipo MP -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[80px]"></div>
+                
+                <div class="w-48 h-48 shrink-0 relative rounded-full border-4 border-brand-cyan/30 overflow-hidden shadow-neon bg-brand-light flex items-center justify-center">
+                    <!-- Imagen de Logo/Equipo -->
+                    <img src="Gemini_Generated_Image_miiyqimiiyqimiiy.jpg" alt="Equipo MP Finanzas" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden flex-col items-center p-4 text-gray-500 text-center">
+                        <i data-lucide="user" class="w-8 h-8 mb-1 opacity-20"></i>
+                        <p class="text-[10px]">Sube la imagen del equipo</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-brand-cyan font-bold tracking-widest uppercase text-sm mb-2">Creadores del Método</h2>
+                    <h3 class="text-3xl font-heading font-black mb-4">MP Finanzas Personales</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Nuestra misión es simple: transformar la teoría financiera compleja en <strong>guías prácticas, ordenadas y paso a paso</strong> que cualquier persona pueda aplicar desde el día uno.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precio Final -->
+    <section id="precio" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-lg relative z-10 text-center">
+            <div class="bg-brand-dark border-2 border-brand-cyan rounded-3xl p-10 shadow-neon relative">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-cyan text-brand-dark font-bold px-8 py-2 rounded-full text-sm">
+                    ACCESO INMEDIATO
+                </div>
+                <h3 class="text-2xl font-bold mt-4 mb-2">Ingresos Extra con IA</h3>
+                <p class="text-gray-400 text-sm mb-6">Guía Digital Paso a Paso</p>
+
+                <div class="mb-8">
+                    <span class="text-gray-500 line-through text-xl">Antes $17 USD</span>
+                    <div class="flex items-center justify-center gap-2 mt-2">
+                        <span class="text-6xl font-black text-white">$9</span>
+                        <span class="text-2xl text-brand-cyan font-bold">USD</span>
+                    </div>
+                </div>
+
+                <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-brand-gold to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-brand-dark font-black py-5 rounded-2xl text-2xl shadow-gold transition-all transform hover:scale-[1.02]">
+                    ¡QUIERO MI COPIA!
+                </a>
+                
+                <p class="mt-6 text-xs text-gray-500 italic">Pago seguro garantizado por Hotmart®</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#050A17] py-12 text-center border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-8 text-gray-500">
+                <i data-lucide="instagram" class="w-5 h-5 hover:text-brand-cyan cursor-pointer transition"></i>
+                <i data-lucide="facebook" class="w-5 h-5 hover:text-brand-cyan cursor-pointer transition"></i>
+                <i data-lucide="mail" class="w-5 h-5 hover:text-brand-cyan cursor-pointer transition"></i>
+            </div>
+            <h3 class="font-bold text-brand-cyan mb-4 uppercase tracking-widest text-sm">MP Finanzas Personales</h3>
+            <p class="text-[10px] text-gray-600 max-w-xl mx-auto leading-relaxed">
+                © 2025 Ingresos Extra con IA. Este sitio no es parte del sitio web de Facebook o Facebook Inc. Además, este sitio no está respaldado por Facebook de ninguna manera. FACEBOOK es una marca comercial de FACEBOOK, Inc.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar iconos
+        lucide.createIcons();
+    </script>
 </body>
 </html>

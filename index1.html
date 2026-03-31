@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Diosa | Abrazando Curvas</title>
+    <style>
+        :root {
+            --rosa-diosa: #ff69b4; /* El rosa de tu logo */
+            --negro-diosa: #1a1a1a;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--negro-diosa);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--blanco);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--rosa-diosa);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03?q=80&w=1000') center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--negro-diosa);
+        }
+
+        .hero span { color: var(--rosa-diosa); }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .section { padding: 60px 20px; text-align: center; }
+
+        .tabla-talles {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .tabla-talles th, .tabla-talles td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        .tabla-talles th { background-color: var(--rosa-diosa); color: white; }
+
+        footer { background: var(--negro-diosa); color: white; padding: 40px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GRAN <span>DIOSA</span></h1>
+    <p>Abrazando Curvas</p>
+</header>
+
+<section class="hero">
+    <h1>Tu moda, tus reglas, <span>tus curvas</span></h1>
+    <p>Talles reales del 44 al 70 para que te sientas única.</p>
+    <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-whatsapp">Ver Catálogo en WhatsApp</a>
+</section>
+
+<section class="section">
+    <h2>Guía de Talles Reales</h2>
+    <p>Medite sin ropa, con el centímetro justo (ni apretado ni suelto).</p>
+    <table class="tabla-talles">
+        <thead>
+            <tr>
+                <th>Talle</th>
+                <th>Busto (cm)</th>
+                <th>Cadera (cm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>4</td><td>110-115</td><td>120-125</td></tr>
+            <tr><td>6</td><td>120-125</td><td>130-135</td></tr>
+            <tr><td>8</td><td>130-135</td><td>140-145</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>Tomas Thomás 36, San Martín, Mendoza</p>
+    <p>Siguenos en @gran.diosa.abrazando.curvas_</p>
+</footer>
+
+</body>
+</html>

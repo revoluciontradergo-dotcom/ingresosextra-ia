@@ -103,7 +103,7 @@
                     </div>
                 </div>
 
-                <!-- Columna Portada (Corregida) -->
+                <!-- Columna Portada -->
                 <div class="lg:w-1/2 w-full flex justify-center">
                     <div class="relative w-full max-w-[450px]">
                         <!-- Glow detrás de la imagen -->
@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    <!-- Sección de Bonuses -->
+    <!-- Sección de Bonuses (Corregida para que se vea el banner) -->
     <section class="py-16 bg-brand-light/20 overflow-hidden border-y border-white/5">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-10">
@@ -135,10 +135,12 @@
             <div class="relative group max-w-5xl mx-auto">
                 <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="block relative outline-none cursor-pointer">
                     <div class="absolute inset-0 bg-brand-cyan/10 rounded-3xl filter blur-3xl group-hover:opacity-40 transition duration-700 opacity-0"></div>
-                    <div class="relative glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition group-hover:scale-[1.01]">
+                    <!-- Se eliminó la clase aspect- fija que podía causar que el alto fuera 0 si la imagen no cargaba -->
+                    <div class="relative glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition group-hover:scale-[1.01] bg-brand-light">
                         <img src="bonuses_visual_1200x800.jpg" 
                              alt="5 Bonuses Exclusivos" 
-                             class="w-full h-auto rounded-2xl block aspect-[1200/800]" 
+                             class="w-full h-auto rounded-2xl block" 
+                             style="min-height: 200px;"
                              onerror="this.src='https://via.placeholder.com/1200x800?text=Banner+Bonuses+1200x800'"/>
                     </div>
                 </a>

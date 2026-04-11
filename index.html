@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    <!-- Sección de Bonuses (Corregida para que se vea el banner) -->
+    <!-- Sección de Bonuses (Estructura simplificada para garantizar visibilidad) -->
     <section class="py-16 bg-brand-light/20 overflow-hidden border-y border-white/5">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-10">
@@ -132,18 +132,13 @@
                 <p class="text-xl text-gray-300">Si te unes hoy, te llevas estos 5 Bonuses Exclusivos GRATIS.</p>
             </div>
             
-            <div class="relative group max-w-5xl mx-auto">
-                <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="block relative outline-none cursor-pointer">
-                    <div class="absolute inset-0 bg-brand-cyan/10 rounded-3xl filter blur-3xl group-hover:opacity-40 transition duration-700 opacity-0"></div>
-                    <!-- Se eliminó la clase aspect- fija que podía causar que el alto fuera 0 si la imagen no cargaba -->
-                    <div class="relative glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition group-hover:scale-[1.01] bg-brand-light">
-                        <img src="bonuses_visual_1200x800.jpg" 
-                             alt="5 Bonuses Exclusivos" 
-                             class="w-full h-auto rounded-2xl block" 
-                             style="min-height: 200px;"
-                             onerror="this.src='https://via.placeholder.com/1200x800?text=Banner+Bonuses+1200x800'"/>
-                    </div>
-                </a>
+            <div class="max-w-5xl mx-auto">
+                <!-- Contenedor directo y limpio -->
+                <div class="glass-panel p-2 rounded-3xl shadow-2xl border border-white/10 hover:border-brand-cyan/40 transition-colors duration-500">
+                    <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="block w-full h-full outline-none">
+                        <img src="bonuses_visual_1200x800.jpg" alt="5 Bonuses Exclusivos" class="w-full h-auto rounded-2xl block transform hover:scale-[1.01] transition-transform duration-300" />
+                    </a>
+                </div>
             </div>
 
             <div class="mt-10 text-center">

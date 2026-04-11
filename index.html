@@ -57,12 +57,6 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 255, 204, 0.2);
         }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
         .cta-button {
             display: inline-block;
             text-align: center;
@@ -78,12 +72,14 @@
     </div>
 
     <!-- Sección Hero -->
-    <section class="relative pt-16 pb-12 overflow-hidden">
+    <section class="relative pt-12 pb-12 md:pt-20 md:pb-20 overflow-hidden">
+        <!-- Luces de fondo -->
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
 
         <div class="container mx-auto px-4 relative z-10 max-w-6xl">
             <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Columna Texto -->
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <div class="inline-block bg-brand-light border border-brand-cyan/50 text-brand-cyan font-semibold px-4 py-1.5 rounded-full text-sm mb-6 shadow-neon">
                         Para emprendedores sin experiencia técnica
@@ -97,7 +93,7 @@
                         La guía diaria, paso a paso, para crear y vender productos digitales usando Inteligencia Artificial gratuita. <strong>Sin rellenos. Solo resultados reales.</strong>
                     </p>
                     <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="cta-button bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-8 rounded-full text-xl shadow-gold transform hover:scale-105 w-full sm:w-auto">
+                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="cta-button bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-10 rounded-full text-xl shadow-gold transform hover:scale-105 w-full sm:w-auto">
                             ¡SÍ, QUIERO EMPEZAR HOY!
                         </a>
                     </div>
@@ -107,12 +103,18 @@
                     </div>
                 </div>
 
-                <div class="lg:w-1/2 relative">
-                    <div class="relative w-full max-w-md mx-auto">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-blue-500 rounded-2xl filter blur-[40px] opacity-30"></div>
-                        <div class="relative bg-brand-light border border-slate-700 p-2 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition duration-500">
-                            <!-- Nombre de archivo actualizado a portada.jpg -->
-                            <img src="portada.jpg" alt="Portada del Libro Ingresos Extra con IA" class="w-full h-auto rounded-lg object-cover aspect-[3/4]" style="min-height: 500px;" onerror="this.src='https://via.placeholder.com/600x800?text=Portada+del+Libro'"/>
+                <!-- Columna Portada (Corregida) -->
+                <div class="lg:w-1/2 w-full flex justify-center">
+                    <div class="relative w-full max-w-[450px]">
+                        <!-- Glow detrás de la imagen -->
+                        <div class="absolute inset-0 bg-brand-cyan rounded-2xl filter blur-[60px] opacity-10"></div>
+                        
+                        <!-- Contenedor de la Imagen con proporción 1410x2250 -->
+                        <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-brand-dark">
+                            <img src="portada.jpg" 
+                                 alt="Portada del Libro" 
+                                 class="w-full h-auto block object-contain aspect-[1410/2250]"
+                                 onerror="this.src='https://via.placeholder.com/1410x2250?text=Portada+No+Encontrada'">
                         </div>
                     </div>
                 </div>
@@ -120,7 +122,7 @@
         </div>
     </section>
 
-    <!-- NUEVA POSICIÓN: Sección de Bonuses (Ahora después del Hero) -->
+    <!-- Sección de Bonuses -->
     <section class="py-16 bg-brand-light/20 overflow-hidden border-y border-white/5">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-10">
@@ -133,21 +135,17 @@
             <div class="relative group max-w-5xl mx-auto">
                 <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="block relative outline-none cursor-pointer">
                     <div class="absolute inset-0 bg-brand-cyan/10 rounded-3xl filter blur-3xl group-hover:opacity-40 transition duration-700 opacity-0"></div>
-                    <!-- Contenedor del Banner 1200x800 -->
                     <div class="relative glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition group-hover:scale-[1.01]">
-                        <!-- Imagen de Bonuses 1200x800 -->
-                        <img src="bonuses_visual_1200x800.jpg" alt="5 Bonuses Exclusivos" class="w-full h-auto rounded-2xl block aspect-[1200/800]" onerror="this.src='https://via.placeholder.com/1200x800?text=Banner+Bonuses+1200x800'"/>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-brand-dark/40 backdrop-blur-[2px]">
-                             <div class="bg-brand-gold text-brand-dark font-black px-8 py-4 rounded-full shadow-2xl text-xl animate-bounce">
-                                 ¡QUIERO MI PACK DE BONUSES!
-                             </div>
-                        </div>
+                        <img src="bonuses_visual_1200x800.jpg" 
+                             alt="5 Bonuses Exclusivos" 
+                             class="w-full h-auto rounded-2xl block aspect-[1200/800]" 
+                             onerror="this.src='https://via.placeholder.com/1200x800?text=Banner+Bonuses+1200x800'"/>
                     </div>
                 </a>
             </div>
 
             <div class="mt-10 text-center">
-                <p class="text-2xl font-bold text-white mb-4">Valor total de los regalos: <span class="text-brand-cyan strike">$125 USD</span></p>
+                <p class="text-2xl font-bold text-white mb-4">Valor total de los regalos: <span class="text-brand-cyan line-through">$125 USD</span></p>
                 <div class="inline-block bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 px-8 py-3 rounded-full font-black text-xl shadow-neon">
                     ¡HOY TODO POR SOLO $9 USD!
                 </div>
@@ -182,12 +180,6 @@
                     <h3 class="text-xl font-bold mb-4">Falta de Tiempo</h3>
                     <p class="text-gray-400 text-sm">El tiempo pasa y no tienes 40 horas a la semana para dedicarle a cursos teóricos interminables.</p>
                 </div>
-            </div>
-
-            <div class="mt-16 text-center max-w-3xl mx-auto">
-                <p class="text-2xl font-light leading-relaxed">
-                    Necesitas un sistema. Necesitas <strong class="text-brand-cyan">seguir un camino paso a paso y ordenado.</strong>
-                </p>
             </div>
         </div>
     </section>
@@ -235,37 +227,7 @@
 
                 <div class="relative">
                     <div class="absolute inset-0 bg-brand-cyan rounded-full filter blur-[100px] opacity-20"></div>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Persona trabajando" class="rounded-2xl shadow-2xl relative z-10 border border-white/10" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calificación / Filtro -->
-    <section class="py-20 bg-brand-dark border-t border-white/10">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-green-500">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="text-green-500 w-8 h-8"></i>
-                        Este producto ES para vos si:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">Querés generar un ingreso extra desde tu casa.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">No sabés nada de tecnología avanzada.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">Solo disponés de 1 a 2 horas al día.</span></li>
-                    </ul>
-                </div>
-
-                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-red-500">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <i data-lucide="x-circle" class="text-red-500 w-8 h-8"></i>
-                        Este producto NO es para vos si:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i data-lucide="x" class="text-red-500 mt-1 shrink-0"></i> <span class="text-gray-300">Buscás un botón mágico para ser millonario sin hacer nada.</span></li>
-                        <li class="flex items-start gap-3"><i data-lucide="x" class="text-red-500 mt-1 shrink-0"></i> <span class="text-gray-300">No estás dispuesto a aplicar las instrucciones diarias.</span></li>
-                    </ul>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Estrategia Digital" class="rounded-2xl shadow-2xl relative z-10 border border-white/10" />
                 </div>
             </div>
         </div>
@@ -280,13 +242,11 @@
                 </div>
 
                 <h3 class="text-2xl font-bold mt-4 mb-2">Ingresos Extra con IA</h3>
-                <p class="text-gray-400 text-sm mb-6">Guía Digital Completa + Regalos</p>
-
-                <div class="mb-6">
-                    <span class="text-gray-500 line-through text-xl">Precio Regular: $17 USD</span>
-                    <div class="flex items-center justify-center gap-2 mt-2">
+                <div class="flex items-center justify-center gap-2 mb-6">
+                    <span class="text-gray-500 line-through text-xl">$17 USD</span>
+                    <div class="flex items-center">
                         <span class="text-5xl font-black text-white">$9</span>
-                        <span class="text-xl text-brand-cyan font-bold">USD</span>
+                        <span class="text-xl text-brand-cyan font-bold ml-1">USD</span>
                     </div>
                 </div>
 
@@ -306,19 +266,20 @@
     <!-- Garantía -->
     <section class="py-16 text-center">
         <div class="container mx-auto px-4 max-w-4xl">
-            <i data-lucide="award" class="w-20 h-20 mx-auto text-brand-gold mb-6"></i>
+            <i data-lucide="award" class="w-16 h-16 mx-auto text-brand-gold mb-6"></i>
             <h2 class="text-3xl font-bold mb-4">Garantía Incondicional de 7 Días</h2>
             <p class="text-gray-400 text-lg">
-                Si sientes que la guía no cumple con lo prometido, solicitas el reembolso y te devolveremos el 100% de tu dinero.
+                Si sientes que la guía no cumple con lo prometido, solicitas el reembolso y te devolveremos el 100% de tu dinero a través de Hotmart.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#050A17] py-8 text-center border-t border-white/5">
+    <footer class="bg-[#050A17] py-12 text-center border-t border-white/5">
         <div class="container mx-auto px-4 text-gray-500 text-sm">
-            <h3 class="font-bold text-brand-cyan mb-4">MP FINANZAS PERSONALES</h3>
-            <p>&copy; 2025 Ingresos Extra con IA. Todos los derechos reservados.</p>
+            <h3 class="font-bold text-brand-cyan mb-4 uppercase tracking-widest">MP FINANZAS PERSONALES</h3>
+            <p class="mb-2">&copy; 2025 Ingresos Extra con IA. Todos los derechos reservados.</p>
+            <p class="max-w-xl mx-auto opacity-50">Este sitio no forma parte de Facebook ni de Google Inc. Los resultados varían según el compromiso personal de cada estudiante.</p>
         </div>
     </footer>
 

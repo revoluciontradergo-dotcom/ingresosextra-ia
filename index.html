@@ -57,23 +57,33 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 255, 204, 0.2);
         }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .cta-button {
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body class="antialiased font-sans selection:bg-brand-cyan selection:text-brand-dark">
 
-    <!-- Banner de Oferta -->
-    <div class="bg-brand-cyan text-brand-dark text-center py-2 px-4 text-sm font-bold uppercase tracking-wider relative z-50">
-        🔥 OFERTA DE LANZAMIENTO: USD 9  🔥
+    <!-- Banner Superior -->
+    <div class="bg-brand-cyan text-brand-dark text-center py-2 px-4 text-sm font-bold uppercase tracking-wider">
+        🔥 OFERTA DE LANZAMIENTO: USD 9 🔥
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative pt-16 pb-24 overflow-hidden">
+    <!-- Sección Hero -->
+    <section class="relative pt-16 pb-12 overflow-hidden">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-cyan rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
 
         <div class="container mx-auto px-4 relative z-10 max-w-6xl">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Texto Principal -->
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <div class="inline-block bg-brand-light border border-brand-cyan/50 text-brand-cyan font-semibold px-4 py-1.5 rounded-full text-sm mb-6 shadow-neon">
                         Para emprendedores sin experiencia técnica
@@ -87,7 +97,7 @@
                         La guía diaria, paso a paso, para crear y vender productos digitales usando Inteligencia Artificial gratuita. <strong>Sin rellenos. Solo resultados reales.</strong>
                     </p>
                     <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-8 rounded-full text-xl shadow-gold transform transition hover:scale-105 w-full sm:w-auto text-center">
+                        <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="cta-button bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-yellow-600 text-brand-dark font-black py-4 px-8 rounded-full text-xl shadow-gold transform hover:scale-105 w-full sm:w-auto">
                             ¡SÍ, QUIERO EMPEZAR HOY!
                         </a>
                     </div>
@@ -97,18 +107,12 @@
                     </div>
                 </div>
 
-                <!-- Imagen de Portada -->
                 <div class="lg:w-1/2 relative">
                     <div class="relative w-full max-w-md mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-blue-500 rounded-2xl filter blur-[40px] opacity-30"></div>
-                        <div class="relative bg-brand-light border border-slate-700 p-2 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition duration-500 min-h-[450px] flex items-center justify-center overflow-hidden">
-                            <!-- Intenta cargar portado.jpg, si no portada ingresos extra.jpg -->
-                            <img src="portado.jpg" alt="Portada Ebook" class="w-full h-auto rounded-lg object-cover" 
-                                 onerror="this.src='portada ingresos extra.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('placeholder-hero').style.display='flex';}">
-                            <div id="placeholder-hero" class="hidden flex-col items-center p-8 text-gray-500">
-                                <i data-lucide="book-open" class="w-16 h-16 mb-4 opacity-20"></i>
-                                <p>Sube 'portado.jpg' a GitHub</p>
-                            </div>
+                        <div class="relative bg-brand-light border border-slate-700 p-2 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition duration-500">
+                            <!-- Nombre de archivo actualizado a portada.jpg -->
+                            <img src="portada.jpg" alt="Portada del Libro Ingresos Extra con IA" class="w-full h-auto rounded-lg object-cover aspect-[3/4]" style="min-height: 500px;" onerror="this.src='https://via.placeholder.com/600x800?text=Portada+del+Libro'"/>
                         </div>
                     </div>
                 </div>
@@ -116,123 +120,205 @@
         </div>
     </section>
 
-    <!-- Problemas/Dolores -->
-    <section class="py-20 bg-brand-light/50 border-y border-white/10">
+    <!-- NUEVA POSICIÓN: Sección de Bonuses (Ahora después del Hero) -->
+    <section class="py-16 bg-brand-light/20 overflow-hidden border-y border-white/5">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-4">
+                    <span class="text-gradient-gold uppercase tracking-tighter italic">¡Pero eso no es todo!</span>
+                </h2>
+                <p class="text-xl text-gray-300">Si te unes hoy, te llevas estos 5 Bonuses Exclusivos GRATIS.</p>
+            </div>
+            
+            <div class="relative group max-w-5xl mx-auto">
+                <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="block relative outline-none cursor-pointer">
+                    <div class="absolute inset-0 bg-brand-cyan/10 rounded-3xl filter blur-3xl group-hover:opacity-40 transition duration-700 opacity-0"></div>
+                    <!-- Contenedor del Banner 1200x800 -->
+                    <div class="relative glass-panel p-2 rounded-3xl overflow-hidden shadow-2xl border border-white/10 transform transition group-hover:scale-[1.01]">
+                        <!-- Imagen de Bonuses 1200x800 -->
+                        <img src="bonuses_visual_1200x800.jpg" alt="5 Bonuses Exclusivos" class="w-full h-auto rounded-2xl block aspect-[1200/800]" onerror="this.src='https://via.placeholder.com/1200x800?text=Banner+Bonuses+1200x800'"/>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-brand-dark/40 backdrop-blur-[2px]">
+                             <div class="bg-brand-gold text-brand-dark font-black px-8 py-4 rounded-full shadow-2xl text-xl animate-bounce">
+                                 ¡QUIERO MI PACK DE BONUSES!
+                             </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                <p class="text-2xl font-bold text-white mb-4">Valor total de los regalos: <span class="text-brand-cyan strike">$125 USD</span></p>
+                <div class="inline-block bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 px-8 py-3 rounded-full font-black text-xl shadow-neon">
+                    ¡HOY TODO POR SOLO $9 USD!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problemas -->
+    <section class="py-20 bg-brand-dark">
         <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">¿Te sientes estancado intentando monetizar la IA?</h2>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">¿Te suena familiar alguna de estas situaciones?</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-panel p-8 rounded-2xl text-center">
                     <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
-                        <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                        <i data-lucide="youtube" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Teoría Infinita</h3>
-                    <p class="text-gray-400 text-sm">Ves tutoriales pero no sabes cómo convertir esa información en dinero real en tu cuenta bancaria.</p>
+                    <h3 class="text-xl font-bold mb-4">Exceso de Información</h3>
+                    <p class="text-gray-400 text-sm">Ves cientos de videos sobre cómo ganar dinero con IA, pero ninguno te dice exactamente <strong>cuál es el primer paso</strong>.</p>
                 </div>
                 <div class="glass-panel p-8 rounded-2xl text-center">
                     <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
-                        <i data-lucide="x-circle" class="w-8 h-8"></i>
+                        <i data-lucide="code" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Miedo Técnico</h3>
-                    <p class="text-gray-400 text-sm">Piensas que necesitas ser un experto en computación para crear un negocio digital.</p>
+                    <h3 class="text-xl font-bold mb-4">Barrera Técnica</h3>
+                    <p class="text-gray-400 text-sm">Crees que necesitas saber programar o diseñar para poder vender productos digitales.</p>
                 </div>
                 <div class="glass-panel p-8 rounded-2xl text-center">
                     <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
-                        <i data-lucide="help-circle" class="w-8 h-8"></i>
+                        <i data-lucide="clock" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Falta de Método</h3>
-                    <p class="text-gray-400 text-sm">Pruebas cosas sueltas sin un plan ordenado y terminas abandonando por frustración.</p>
+                    <h3 class="text-xl font-bold mb-4">Falta de Tiempo</h3>
+                    <p class="text-gray-400 text-sm">El tiempo pasa y no tienes 40 horas a la semana para dedicarle a cursos teóricos interminables.</p>
                 </div>
+            </div>
+
+            <div class="mt-16 text-center max-w-3xl mx-auto">
+                <p class="text-2xl font-light leading-relaxed">
+                    Necesitas un sistema. Necesitas <strong class="text-brand-cyan">seguir un camino paso a paso y ordenado.</strong>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Lo que aprenderán (El Plan) -->
-    <section class="py-24 relative">
+    <!-- La Solución -->
+    <section class="py-24 relative bg-brand-light/10">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Tu Hoja de Ruta de <span class="text-gradient-cyan">4 Semanas</span></h2>
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">La Solución: <span class="text-gradient-cyan">Un Plan de 30 Días</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    No es teoría. Es un manual de acción. Cada día una tarea. Así de simple.
+                </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <div class="flex gap-4 p-6 glass-panel rounded-xl">
-                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">01</div>
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl hover:border-brand-cyan/50 transition">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">
+                            <i data-lucide="hammer" class="w-6 h-6"></i>
+                        </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Fundamentos y Herramientas</h3>
-                            <p class="text-gray-400 text-sm">Configuramos tu arsenal de IA gratuita y dominamos el arte de dar órdenes (prompts) que generen valor real.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">SEMANA 1: Cimientos</h3>
+                            <p class="text-gray-400">Configura tu kit gratuito de IA. Aprende a darle las instrucciones correctas a ChatGPT y valida tu idea.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 glass-panel rounded-xl border-l-4 border-brand-cyan">
-                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">02</div>
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl hover:border-brand-cyan/50 transition">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Creación de tu Producto</h3>
-                            <p class="text-gray-400 text-sm">Usamos la IA para escribir, estructurar y diseñar un producto que la gente quiera comprar.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">SEMANA 2: Creación</h3>
+                            <p class="text-gray-400">Usa la IA para escribir y diseñar tu primer producto digital sin ser redactor ni diseñador.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 p-6 glass-panel rounded-xl">
-                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">03</div>
+                    <div class="flex gap-4 p-6 glass-panel rounded-xl hover:border-brand-cyan/50 transition">
+                        <div class="bg-brand-cyan/20 text-brand-cyan p-3 rounded-lg h-fit">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Marketing y Ventas</h3>
-                            <p class="text-gray-400 text-sm">Montamos el sistema de ventas automático para que tu producto empiece a generar ingresos 24/7.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">SEMANA 3 y 4: Ventas</h3>
+                            <p class="text-gray-400">Publica en Hotmart y aplica las estrategias para conseguir tráfico y tus primeras ventas en dólares.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" alt="IA Concept" class="rounded-2xl shadow-2xl border border-white/10 opacity-60">
+                    <div class="absolute inset-0 bg-brand-cyan rounded-full filter blur-[100px] opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Persona trabajando" class="rounded-2xl shadow-2xl relative z-10 border border-white/10" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre el Autor/Equipo -->
-    <section class="py-20">
-        <div class="container mx-auto px-4 max-w-4xl text-center md:text-left">
-            <div class="glass-panel p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-10">
-                <div class="w-48 h-48 shrink-0 rounded-full border-4 border-brand-cyan/30 overflow-hidden shadow-neon">
-                    <img src="Gemini_Generated_Image_hmt9s6hmt9s6hmt9.png" alt="Logo MP" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="hidden p-8 text-gray-500">Logo Equipo</div>
+    <!-- Calificación / Filtro -->
+    <section class="py-20 bg-brand-dark border-t border-white/10">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-green-500">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="text-green-500 w-8 h-8"></i>
+                        Este producto ES para vos si:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">Querés generar un ingreso extra desde tu casa.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">No sabés nada de tecnología avanzada.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 mt-1 shrink-0"></i> <span class="text-gray-300">Solo disponés de 1 a 2 horas al día.</span></li>
+                    </ul>
                 </div>
-                <div>
-                    <h2 class="text-brand-cyan font-bold tracking-widest uppercase text-xs mb-2">Creado por</h2>
-                    <h3 class="text-3xl font-heading font-black mb-4">MP Finanzas Personales</h3>
-                    <p class="text-gray-300 leading-relaxed italic">
-                        "Nuestra misión es democratizar el acceso a las finanzas digitales. No importa si empiezas de cero absoluto; con las herramientas correctas y un plan diario, el éxito es una consecuencia inevitable."
-                    </p>
+
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-red-500">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="text-red-500 w-8 h-8"></i>
+                        Este producto NO es para vos si:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="text-red-500 mt-1 shrink-0"></i> <span class="text-gray-300">Buscás un botón mágico para ser millonario sin hacer nada.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="text-red-500 mt-1 shrink-0"></i> <span class="text-gray-300">No estás dispuesto a aplicar las instrucciones diarias.</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Final -->
-    <section class="py-24 text-center">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-4xl font-heading font-black mb-8">¿Estás listo para dejar de mirar y empezar a ganar?</h2>
-            <div class="bg-brand-dark border-2 border-brand-gold rounded-3xl p-10 shadow-gold inline-block w-full">
-                <p class="text-gray-400 uppercase tracking-widest text-sm mb-4">Acceso inmediato por solo</p>
-                <div class="flex items-center justify-center gap-2 mb-8">
-                    <span class="text-7xl font-black text-white">$9</span>
-                    <span class="text-2xl text-brand-gold font-bold">USD</span>
+    <!-- Precio -->
+    <section id="precio" class="py-24 relative bg-brand-light/20">
+        <div class="container mx-auto px-4 max-w-lg relative z-10">
+            <div class="bg-brand-dark border-2 border-brand-cyan rounded-3xl p-8 shadow-neon relative text-center">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-cyan text-brand-dark font-bold px-6 py-2 rounded-full shadow-lg">
+                    EDICIÓN 2025
                 </div>
-                <a href="https://pay.hotmart.com/G105138520X" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-brand-gold to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-brand-dark font-black py-5 rounded-2xl text-2xl transition-all transform hover:scale-[1.03]">
-                    ¡QUIERO EL PLAN DE 30 DÍAS!
+
+                <h3 class="text-2xl font-bold mt-4 mb-2">Ingresos Extra con IA</h3>
+                <p class="text-gray-400 text-sm mb-6">Guía Digital Completa + Regalos</p>
+
+                <div class="mb-6">
+                    <span class="text-gray-500 line-through text-xl">Precio Regular: $17 USD</span>
+                    <div class="flex items-center justify-center gap-2 mt-2">
+                        <span class="text-5xl font-black text-white">$9</span>
+                        <span class="text-xl text-brand-cyan font-bold">USD</span>
+                    </div>
+                </div>
+
+                <ul class="text-left space-y-4 mb-8 text-gray-300">
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-cyan w-5 h-5"></i> Plan detallado Día 1 al Día 30</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-cyan w-5 h-5"></i> 5 Bonuses Exclusivos Incluidos</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-cyan w-5 h-5"></i> Acceso de por vida al material</li>
+                </ul>
+
+                <a href="https://pay.hotmart.com/G105138520X" target="_blank" class="cta-button block w-full bg-gradient-to-r from-brand-gold to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-brand-dark font-black py-4 rounded-xl text-xl shadow-gold">
+                    ¡COMPRAR AHORA POR $9!
                 </a>
-                <div class="flex items-center justify-center gap-6 mt-8 opacity-50">
-                    <i data-lucide="credit-card" class="w-6 h-6"></i>
-                    <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    <i data-lucide="zap" class="w-6 h-6"></i>
-                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Garantía -->
+    <section class="py-16 text-center">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <i data-lucide="award" class="w-20 h-20 mx-auto text-brand-gold mb-6"></i>
+            <h2 class="text-3xl font-bold mb-4">Garantía Incondicional de 7 Días</h2>
+            <p class="text-gray-400 text-lg">
+                Si sientes que la guía no cumple con lo prometido, solicitas el reembolso y te devolveremos el 100% de tu dinero.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#050A17] py-12 text-center border-t border-white/5">
-        <div class="container mx-auto px-4">
-            <h3 class="font-bold text-brand-cyan mb-4 uppercase tracking-widest text-sm">MP Finanzas Personales</h3>
-            <p class="text-[10px] text-gray-600 max-w-xl mx-auto">
-                © 2025 Ingresos Extra con IA. Este producto no garantiza resultados por sí solo; el éxito depende de la implementación del usuario.
-            </p>
+    <footer class="bg-[#050A17] py-8 text-center border-t border-white/5">
+        <div class="container mx-auto px-4 text-gray-500 text-sm">
+            <h3 class="font-bold text-brand-cyan mb-4">MP FINANZAS PERSONALES</h3>
+            <p>&copy; 2025 Ingresos Extra con IA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
